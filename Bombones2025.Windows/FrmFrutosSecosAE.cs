@@ -77,18 +77,7 @@ namespace Bombones2025.Windows
             }
         }
 
-        //private bool ValidarDatos()
-        //{
-        //    bool valido = true;
-        //    errorProvider1.Clear();
-        //    if (string.IsNullOrEmpty(TxtFrutoSeco.Text))
-        //    {
-        //        valido = false;
-        //        errorProvider1.SetError(TxtFrutoSeco, "El fruto es requerido");
 
-        //    }
-        //    return valido;
-        //}
 
         public void SetFrusoSeco(FrutoSeco frutoSeco)
         {

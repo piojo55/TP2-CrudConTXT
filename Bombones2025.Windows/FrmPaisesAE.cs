@@ -54,7 +54,17 @@ namespace Bombones2025.Windows
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
+            if (ValidarDatos())
+            {
+                if (pais is null)
+                {
+                    pais = new Pais();
 
+                }
+                pais.NombrePais = TxtPais.Text;
+
+                DialogResult = DialogResult.OK;
+            }
         }
     }
 }

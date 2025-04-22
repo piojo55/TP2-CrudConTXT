@@ -1,0 +1,29 @@
+﻿1|Chocolate Amargo
+2|Chocolate Semiamargo
+3|Chocolate con Leche
+4|Chocolate Blanco
+5|Chocolate con Almendras
+7|Chocolate con Avellanas
+8|Chocolate 60% Cacao
+9|Chocolate 70% Cacao
+10|Chocolate 85% Cacao
+11|Chocolate sin Azúcar
+12|Chocolate Orgánico
+13|Chocolate Vegano
+14|Chocolate con Naranja
+15|Chocolate con Menta
+16|Chocolate con Sal Marina
+17|Chocolate Picante
+18|Chocolate con Café
+19|Chocolate con Frambuesa
+20|Chocolate con Licor
+22|Chocolate Crujiente
+23|Chocolate de Cobertura
+24|Chocolate de Repostería
+25|Chocolate Artesanal
+27|Chocolate Relleno
+28|Chocolate Ruby
+29|Chocolate Caramelo Salado
+30|Chocolate con Coco
+31|Chocolate Praliné
+32|Chocolate Negro Extra Intenso

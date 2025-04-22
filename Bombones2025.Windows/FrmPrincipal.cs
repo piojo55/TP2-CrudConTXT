@@ -27,5 +27,12 @@ namespace Bombones2025.Windows
         {
 
         }
+
+        private void btnChocolates_Click(object sender, EventArgs e)
+        {
+            ChocolateServicio servicio = new ChocolateServicio("TipoDeChocolate.txt");
+            FrmChocolates frm = new FrmChocolates(servicio) { Text = "Listado Tipos de Chocolate" };
+            frm.ShowDialog(this);
+        }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Bombones2025.Entidades;
-using System.Xml.Linq;
 
 namespace Bombones2025.Datos.Repositorios
 {
@@ -57,8 +56,8 @@ namespace Bombones2025.Datos.Repositorios
         }
         public void Agregar(Chocolate chocolate)
         {
-            pais.PaisId = SetearPaisId();
-            paises.Add(pais);
+            chocolate.ChocolateId = SetearChocolateId();
+            chocolates.Add(chocolate);
             if (File.Exists(ruta))
             {
                 var registros = File.ReadAllText(ruta);
@@ -70,39 +69,39 @@ namespace Bombones2025.Datos.Repositorios
             }
             using (var escritor = new StreamWriter(ruta, true))
             {
-                string linea = ConstruirLinea(pais);
+                string linea = ConstruirLinea(chocolate);
                 escritor.WriteLine(linea);
             }
         }
 
-        private string ConstruirLinea(Pais pais)
+        private string ConstruirLinea(Chocolate chocolate)
         {
-            return $"{pais.PaisId}|{pais.NombrePais}";
+            return $"{chocolate.ChocolateId}|{chocolate.NombreChocolate}";
         }
 
-        public void Borrar(Pais pais)
+        public void Borrar(Chocolate chocolate)
         {
-            Pais? paisBorrar = paises.FirstOrDefault(p => p.NombrePais == pais.NombrePais);
-            if (paisBorrar is null)
+            Chocolate? chocolateBorrar = chocolates.FirstOrDefault(p => p.NombreChocolate == chocolate.NombreChocolate);
+            if (chocolateBorrar is null)
             {
                 return;
             }
-            paises.Remove(paisBorrar);
+            chocolates.Remove(chocolateBorrar);
 
-            var registros = paises.Select(p => ConstruirLinea(p)).ToArray();
+            var registros = chocolates.Select(p => ConstruirLinea(p)).ToArray();
             File.WriteAllLines(ruta, registros);
 
         }
 
-        public void Editar(Pais pais)
+        public void Editar(Chocolate chocolate)
         {
-            var paisEditado = paises.FirstOrDefault(p => p.PaisId == pais.PaisId);
-            if (paisEditado is null)
+            var chocolateEditado = chocolates.FirstOrDefault(p => p.ChocolateId == chocolate.ChocolateId);
+            if (chocolateEditado is null)
             {
                 return;
             }
-            paisEditado.NombrePais = pais.NombrePais;
-            var registros = paises.Select(p => ConstruirLinea(p)).ToArray();
+            chocolateEditado.NombreChocolate = chocolate.NombreChocolate;
+            var registros = chocolates.Select(p => ConstruirLinea(p)).ToArray();
             File.WriteAllLines(ruta, registros);
 
 

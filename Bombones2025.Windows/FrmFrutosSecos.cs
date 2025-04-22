@@ -66,13 +66,13 @@ namespace Bombones2025.Windows
                 r.CreateCells(dgvDatos);
                 SetearFila(r, frutoSeco);
                 AgregarFila(r);
-                MessageBox.Show("Pais agregado", "Mensaje",
+                MessageBox.Show("Fruto agregado", "Mensaje",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
-                MessageBox.Show("Pais existente", "Error",
+                MessageBox.Show("Fruto existente", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
